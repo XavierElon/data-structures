@@ -40,6 +40,6 @@ examples.forEach((example) => {
   console.log(solution.removeDuplicates(example))
 })
 /*
-Time Complexity:
-Space Complexity:
+Time Complexity: O(n)
+Space Complexity: O(n)
 */
