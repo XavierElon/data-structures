@@ -20,10 +20,15 @@ Explanation: The string "s" is already good because it only contains one charact
 */
 
 class Solution {
-  removeDuplicates(s) {
+  makeGood(s) {
     let stack = []
+
     for (let c of s) {
-      if (stack.length > 0 && stack[stack.length - 1] === c) {
+      if (
+        stack.length &&
+        stack[stack.length - 1].toLowerCase() === c.toLowerCase() &&
+        stack[stack.length - 1] !== c
+      ) {
         stack.pop()
       } else {
         stack.push(c)
@@ -34,11 +39,12 @@ class Solution {
 }
 
 const solution = new Solution()
-const examples = ['azxxxzy', 'aaaabbbbc', 'abc', '', 'ccd']
+const examples = ['abBA', '', 'AaBbCcDdEeff', 'AAbbCcBDdefE']
 
 examples.forEach((example) => {
-  console.log(solution.removeDuplicates(example))
+  console.log(solution.makeGood(example))
 })
+
 /*
 Time Complexity: O(n)
 Space Complexity: O(n)
