@@ -43,3 +43,8 @@ examples.forEach((example) => {
 // console.log(solution.isValid(test2))
 // console.log(solution.isValid(test3))
 // console.log(solution.isValid(test4))
+
+/*
+Time Complexity: O(n)
+Space Complexity: O(n)
+*/
