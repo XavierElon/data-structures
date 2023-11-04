@@ -32,3 +32,8 @@ testInputs.forEach((input) => {
 
   console.log(output)
 })
+
+/*
+Time Complexity: O(n)
+Space Complexity: O(n)
+*/
