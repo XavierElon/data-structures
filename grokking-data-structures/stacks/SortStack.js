@@ -12,7 +12,35 @@ Examples
    Output: [-5, -1, 10, 20]
 */
 
+class Solution {
+  sortStack(stack) {
+    let tempStack = []
+
+    while (stack.length) {
+      let temp = stack.pop()
+      while (tempStack.length && tempStack[tempStack.length - 1] > temp) {
+        stack.push(tempStack.pop())
+      }
+      tempStack.push(temp)
+    }
+    return tempStack
+  }
+}
+
+const solution = new Solution()
+const examples = [
+  [34, 3, 31, 98, 92, 23],
+  [1, 0, 2, -1, -10, 0, 1],
+  [],
+  [1, 1, 1, 1],
+  [4, 3, 2, 1, 0, -1],
+]
+
+examples.forEach((example) => {
+  console.log(solution.sortStack(example))
+})
+
 /*
-Time Complexity:
-Space Complexity:
+Time Complexity: O(n^2)
+Space Complexity: O(n)
 */
