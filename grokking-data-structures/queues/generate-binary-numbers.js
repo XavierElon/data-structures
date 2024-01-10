@@ -22,6 +22,7 @@ class Solution {
 }
 
 let sol = new Solution()
+console.log(sol.generateBinaryNumbers(8)) // Test with n = 5
 console.log(sol.generateBinaryNumbers(2)) // Test with n = 2
 console.log(sol.generateBinaryNumbers(3)) // Test with n = 3
 console.log(sol.generateBinaryNumbers(5)) // Test with n = 5
